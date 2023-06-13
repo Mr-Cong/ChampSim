@@ -23,7 +23,7 @@ enum class branch_info {
   CONDITIONAL,
 };
 
-constexpr std::size_t BTB_SET = 1024;
+constexpr std::size_t BTB_SET = 2048;
 constexpr std::size_t BTB_WAY = 8;
 constexpr std::size_t BTB_INDIRECT_SIZE = 4096;
 constexpr std::size_t RAS_SIZE = 64;

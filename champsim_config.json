@@ -8,7 +8,7 @@
     "ooo_cpu": [
         {
             "frequency": 4000,
-            "ifetch_buffer_size":64,
+            "ifetch_buffer_size":192,
             "decode_buffer_size":32,
             "dispatch_buffer_size":32,
             "rob_size": 352,
@@ -27,7 +27,7 @@
             "dispatch_latency": 1,
             "schedule_latency": 0,
             "execute_latency": 0,
-            "branch_predictor": "bimodal",
+            "branch_predictor": "hashed_perceptron",
             "btb": "basic_btb"
         }
     ],
@@ -50,8 +50,8 @@
         "max_fill": 2,
         "prefetch_as_load": false,
         "virtual_prefetch": true,
-        "prefetch_activate": "LOAD,PREFETCH",
-        "prefetcher": "no_instr"
+        "prefetch_activate": "LOAD",
+        "prefetcher": "barsa"
     },
 
     "L1D": {
@@ -67,7 +67,7 @@
         "prefetch_as_load": false,
         "virtual_prefetch": false,
         "prefetch_activate": "LOAD,PREFETCH",
-        "prefetcher": "no"
+        "prefetcher": "ip_stride"
     },
 
     "L2C": {
@@ -83,7 +83,7 @@
         "prefetch_as_load": false,
         "virtual_prefetch": false,
         "prefetch_activate": "LOAD,PREFETCH",
-        "prefetcher": "no"
+        "prefetcher": "next_line"
     },
 
     "ITLB": {
